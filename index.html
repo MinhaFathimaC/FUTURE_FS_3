@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sunrise Cafe</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background-image:url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+}
+
+/* overlay */
+
+.overlay{
+background:rgba(255,255,255,0.9);
+}
+
+/* header */
+
+header{
+background:linear-gradient(90deg,#ff7e5f,#feb47b);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+nav{
+background:#333;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:18px;
+padding:8px 15px;
+border-radius:20px;
+}
+
+nav a:hover{
+background:#ff9800;
+}
+
+section{
+padding:60px;
+text-align:center;
+}
+
+/* button */
+
+button{
+background:#ff9800;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff5722;
+}
+
+/* services */
+
+.services{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.card i{
+font-size:30px;
+color:#ff5722;
+}
+
+/* contact */
+
+form{
+background:white;
+padding:30px;
+width:300px;
+margin:auto;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+input,textarea{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* footer */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<header>
+<h1><i class="fa-solid fa-mug-hot"></i> Sunrise Cafe</h1>
+<p>Fresh Coffee • Delicious Food • Friendly Place</p>
+</header>
+
+<nav>
+
+<a href="#home"><i class="fa fa-home"></i> Home</a>
+<a href="#about"><i class="fa fa-user"></i> About</a>
+<a href="#menu"><i class="fa fa-utensils"></i> Menu</a>
+<a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+
+</nav>
+
+<section id="home">
+
+<h2>Welcome to Sunrise Cafe</h2>
+<p>Enjoy the best coffee and snacks in town.</p>
+
+<button onclick="order()">Order Now</button>
+
+</section>
+
+<section id="about">
+
+<h2>About Our Cafe</h2>
+
+<p>
+Sunrise Cafe is a local business providing fresh coffee,
+snacks and desserts. We create a relaxing place for
+customers to enjoy with friends and family.
+</p>
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+width="400" style="border-radius:15px">
+
+</section>
+
+<section id="menu">
+
+<h2>Our Menu</h2>
+
+<div class="services">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+
+<h3><i class="fa-solid fa-mug-hot"></i> Coffee</h3>
+
+<p>Fresh hot coffee made from premium beans.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1528731708534-816fe59f90cb">
+
+<h3><i class="fa-solid fa-burger"></i> Sandwich</h3>
+
+<p>Tasty sandwiches and snacks.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87">
+
+<h3><i class="fa-solid fa-cake-candles"></i> Desserts</h3>
+
+<p>Sweet cakes and pastries.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendMsg(event)">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Sunrise Cafe | Internship Project</p>
+
+</footer>
+
+</div>
+
+<script>
+
+function order(){
+alert("Thank you! Online ordering coming soon.");
+}
+
+function sendMsg(e){
+e.preventDefault();
+alert("Message sent successfully!");
+}
+
+</script>
+
+</body>
+</html>
